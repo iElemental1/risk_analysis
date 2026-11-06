@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: '/mi-proyecto',
-  assetPrefix: '/mi-proyecto/',
+  basePath: '/risk_analysis',
+  assetPrefix: '/risk_analysis',
 };
 
 module.exports = nextConfig;
