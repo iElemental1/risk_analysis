@@ -403,69 +403,153 @@ export default function Dashboard() {
           </p>
         </section>
 
-        {/* MATRIZ DE CALOR DE RIESGOS (Opción 2) */}
+ {/* MATRIZ DE CALOR DE RIESGOS (Matriz 3x3 Real GRC) */}
         <section className="bg-slate-900 rounded-2xl border border-slate-800 p-6 md:p-8">
-          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-            <ShieldCheck className="text-cyan-400" size={20} />
-            MATRIZ DE CALOR: IMPACTO VS. PROBABILIDAD (ISO 31000)
-          </h2>
-          <p className="text-xs text-slate-400 mb-6">
-            Evaluación cualitativa de riesgos afectivos bajo los estándares de control interno corporativo.
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
+            <div>
+              <h2 className="text-lg font-bold text-white flex items-center gap-2">
+                <ShieldCheck className="text-cyan-400" size={20} />
+                MATRIZ DE CALOR DE RIESGOS (ISO 31000 / GRC Dashboard)
+              </h2>
+              <p className="text-xs text-slate-400 mt-1">
+                Evaluación cuantitativa de probabilidad vs. impacto en los activos emocionales clave.
+              </p>
+            </div>
+            <span className="text-xs font-mono bg-cyan-950 text-cyan-400 px-3 py-1 rounded-full border border-cyan-800 self-start md:self-auto">
+              Status: Monitoreo Activo
+            </span>
+          </div>
+
+          {/* Cuadrícula de Matriz 3x3 */}
+          <div className="overflow-x-auto">
+            <div className="min-w-[600px] grid grid-cols-4 gap-2 font-mono text-xs">
+              {/* Cabeceras de Impacto */}
+              <div className="text-slate-500 font-bold flex items-end pb-2">PROBABILIDAD \ IMPACTO</div>
+              <div className="bg-slate-800/80 p-2 text-center text-slate-300 font-bold rounded">Bajo (1)</div>
+              <div className="bg-slate-800/80 p-2 text-center text-slate-300 font-bold rounded">Medio (2)</div>
+              <div className="bg-slate-800/80 p-2 text-center text-slate-300 font-bold rounded">Alto (3)</div>
+
+              {/* Fila Alta */}
+              <div className="bg-slate-800/50 p-2 flex items-center text-slate-400 font-bold">Alta</div>
+              <div className="bg-yellow-500/20 border border-yellow-500/30 p-3 rounded text-center text-yellow-300">
+                <span className="block text-[10px] text-slate-400">Riesgo Operativo</span>
+                <span>Retrasos de 5 min al salir</span>
+              </div>
+              <div className="bg-orange-500/20 border border-orange-500/30 p-3 rounded text-center text-orange-300">
+                <span className="block text-[10px] text-slate-400">Riesgo Táctico</span>
+                <span>Indecisión al elegir restaurante</span>
+              </div>
+              <div className="bg-cyan-500/30 border-2 border-cyan-400 p-3 rounded text-center text-cyan-200 shadow-[0_0_15px_rgba(6,182,212,0.3)] relative">
+                <span className="absolute -top-2 right-2 bg-cyan-500 text-black text-[9px] px-1.5 rounded font-bold">CORE</span>
+                <span className="block text-[10px] text-cyan-300 font-bold">CRÍTICO / ESTRATÉGICO</span>
+                <span className="font-bold text-white">Enamoramiento masivo (100%)</span>
+              </div>
+
+              {/* Fila Media */}
+              <div className="bg-slate-800/50 p-2 flex items-center text-slate-400 font-bold">Media</div>
+              <div className="bg-green-500/10 border border-green-500/20 p-3 rounded text-center text-green-400">
+                <span className="block text-[10px] text-slate-500">Aceptable</span>
+                <span>Falta de café matutino</span>
+              </div>
+              <div className="bg-yellow-500/20 border border-yellow-500/30 p-3 rounded text-center text-yellow-300">
+                <span className="block text-[10px] text-slate-400">Moderado</span>
+                <span>Clima lluvioso sin sombrilla</span>
+              </div>
+              <div className="bg-orange-500/20 border border-orange-500/30 p-3 rounded text-center text-orange-300">
+                <span className="block text-[10px] text-slate-400">Significativo</span>
+                <span>Maratón de series completo</span>
+              </div>
+
+              {/* Fila Baja */}
+              <div className="bg-slate-800/50 p-2 flex items-center text-slate-400 font-bold">Baja</div>
+              <div className="bg-green-500/10 border border-green-500/20 p-3 rounded text-center text-green-400">
+                <span className="block text-[10px] text-slate-500">Tolerable</span>
+                <span>Batería baja en el auto</span>
+              </div>
+              <div className="bg-green-500/10 border border-green-500/20 p-3 rounded text-center text-green-400">
+                <span className="block text-[10px] text-slate-500">Tolerable</span>
+                <span>Tráfico leve en periférico</span>
+              </div>
+              <div className="bg-yellow-500/20 border border-yellow-500/30 p-3 rounded text-center text-yellow-300">
+                <span className="block text-[10px] text-slate-400">Moderado</span>
+                <span>Discusión por la playlist</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LOGS DE AUDITORÍA SIEM (Estilo Consola SOC / Splunk / Sentinel) */}
+        <section className="bg-slate-900 rounded-2xl border border-slate-800 p-6 md:p-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold text-white flex items-center gap-2">
+              <Terminal className="text-cyan-400" size={20} />
+              SIEM INVESTIGATION CONSOLE - INCIDENT RESPONSE
+            </h2>
+            <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              <span>Live Stream Active</span>
+            </div>
+          </div>
+
+          <p className="text-xs text-slate-400 mb-4">
+            Monitoreo en tiempo real de telemetría de eventos afectivos y análisis de comportamiento de red.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center font-mono text-xs">
-            <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 flex flex-col justify-center">
-              <span className="text-slate-400">Bajo / Bajo</span>
-              <span className="text-slate-500 text-[10px] mt-1">Riesgo de aburrimiento</span>
-              <span className="text-green-400 font-bold mt-2">0.0% (Mitigado)</span>
+          <div className="bg-black rounded-xl border border-slate-800 font-mono text-xs overflow-hidden shadow-inner">
+            {/* Barra superior de herramientas de consola */}
+            <div className="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center justify-between text-slate-500 text-[11px]">
+              <span>Query: index=heartbeats source="fer_and_emiliano" | eval risk=0.00</span>
+              <span className="text-cyan-400">4 Events Found</span>
             </div>
-            <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 flex flex-col justify-center">
-              <span className="text-slate-400">Medio / Medio</span>
-              <span className="text-slate-500 text-[10px] mt-1">Indecisión de qué cenar</span>
-              <span className="text-yellow-400 font-bold mt-2">15.2% (Tolerable)</span>
-            </div>
-            <div className="bg-cyan-950/40 p-4 rounded-lg border border-cyan-500/50 flex flex-col justify-center shadow-[0_0_15px_rgba(6,182,212,0.1)]">
-              <span className="text-cyan-300 font-bold">Alto / Certero</span>
-              <span className="text-cyan-400 text-[10px] mt-1">Enamoramiento masivo</span>
-              <span className="text-cyan-400 font-bold mt-2 text-sm">100% (Acceptable / Core)</span>
+
+            {/* Tabla de logs de alta fidelidad */}
+            <div className="overflow-x-auto p-4 space-y-2">
+              <div className="grid grid-cols-12 text-slate-500 border-b border-slate-900 pb-2 text-[10px] min-w-[700px]">
+                <span className="col-span-3">TIMESTAMP (UTC)</span>
+                <span className="col-span-2">EVENT_ID</span>
+                <span className="col-span-2">SEVERITY</span>
+                <span className="col-span-5">ACTION / DESCRIPTION</span>
+              </div>
+
+              <div className="grid grid-cols-12 items-center text-cyan-400 hover:bg-slate-950 p-1 rounded transition-colors min-w-[700px]">
+                <span className="col-span-3 text-slate-400">[2026-02-14 21:00:12]</span>
+                <span className="col-span-2 text-slate-300 font-semibold">EVT_089</span>
+                <span className="col-span-2">
+                  <span className="bg-blue-950 text-blue-400 px-2 py-0.5 rounded text-[10px] border border-blue-800">LOW</span>
+                </span>
+                <span className="col-span-5 text-slate-300">Sonrisa detectada (Anomalía positiva extrema en sensor visual)</span>
+              </div>
+
+              <div className="grid grid-cols-12 items-center text-cyan-400 hover:bg-slate-950 p-1 rounded transition-colors min-w-[700px]">
+                <span className="col-span-3 text-slate-400">[2026-03-20 18:30:45]</span>
+                <span className="col-span-2 text-slate-300 font-semibold">EVT_090</span>
+                <span className="col-span-2">
+                  <span className="bg-green-950 text-green-400 px-2 py-0.5 rounded text-[10px] border border-green-800">INFO</span>
+                </span>
+                <span className="col-span-5 text-slate-300">Sintonía de gustos musicales sincronizada al 99.8% (Handshake OK)</span>
+              </div>
+
+              <div className="grid grid-cols-12 items-center text-cyan-400 hover:bg-slate-950 p-1 rounded transition-colors min-w-[700px]">
+                <span className="col-span-3 text-slate-400">[2026-05-10 12:15:00]</span>
+                <span className="col-span-2 text-slate-300 font-semibold">EVT_095</span>
+                <span className="col-span-2">
+                  <span className="bg-yellow-950 text-yellow-400 px-2 py-0.5 rounded text-[10px] border border-yellow-800">MEDIUM</span>
+                </span>
+                <span className="col-span-5 text-slate-300">Aumento masivo de interés en viajes y planes a futuro</span>
+              </div>
+
+              <div className="grid grid-cols-12 items-center bg-pink-950/20 border border-pink-500/30 p-2 rounded animate-pulse min-w-[700px]">
+                <span className="col-span-3 text-pink-300">[REALTIME_ALERT]</span>
+                <span className="col-span-2 text-white font-bold">EVT_099</span>
+                <span className="col-span-2">
+                  <span className="bg-pink-900 text-white px-2 py-0.5 rounded text-[10px] font-bold shadow-[0_0_10px_rgba(236,72,153,0.5)]">CRITICAL</span>
+                </span>
+                <span className="col-span-5 text-pink-300 font-bold">Propuesta de noviazgo pendiente de autorización por Fer</span>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* LOGS DE AUDITORÍA SIEM (Opción 3) */}
-        <section className="bg-slate-900 rounded-2xl border border-slate-800 p-6 md:p-8">
-          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-            <Terminal className="text-cyan-400" size={20} />
-            SIEM AUDIT LOGS - INCIDENTES DETECTADOS
-          </h2>
-          <div className="bg-black p-4 rounded-xl border border-slate-800 font-mono text-xs space-y-2 text-slate-300 overflow-x-auto">
-            <div className="flex justify-between text-slate-500 border-b border-slate-900 pb-1 min-w-[500px]">
-              <span>TIMESTAMP</span>
-              <span>EVENT_ID</span>
-              <span>SEVERITY</span>
-              <span>DESCRIPTION</span>
-            </div>
-            <div className="flex justify-between items-center text-cyan-400 min-w-[500px]">
-              <span>[2026-02-14 21:00]</span>
-              <span>EVT_089</span>
-              <span className="bg-green-950 text-green-400 px-1.5 py-0.5 rounded text-[10px]">INFO</span>
-              <span>Sonrisa detectada (Anomalía positiva extrema)</span>
-            </div>
-            <div className="flex justify-between items-center text-cyan-400 min-w-[500px]">
-              <span>[2026-03-20 18:30]</span>
-              <span>EVT_090</span>
-              <span className="bg-green-950 text-green-400 px-1.5 py-0.5 rounded text-[10px]">INFO</span>
-              <span>Sintonía de gustos musicales al 99.8%</span>
-            </div>
-            <div className="flex justify-between items-center text-pink-400 font-bold min-w-[500px]">
-              <span>[REALTIME]</span>
-              <span>EVT_099</span>
-              <span className="bg-pink-950 text-pink-400 px-1.5 py-0.5 rounded text-[10px]">CRITICAL</span>
-              <span>Propuesta de noviazgo pendiente de autorización</span>
-            </div>
-          </div>
-        </section>
-
+        
         {/* BLOQUE DE CÓDIGO Y PREGUNTA */}
         <section className="bg-[#1e1e1e] rounded-xl border border-slate-800 overflow-hidden font-mono shadow-2xl relative">
           <div className="bg-[#2d2d2d] px-4 py-2 flex items-center gap-2 border-b border-slate-700/50">
