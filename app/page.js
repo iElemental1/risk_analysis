@@ -266,11 +266,10 @@ export default function Dashboard() {
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0 overflow-x-auto pb-4 hide-scrollbar">
             
-            {/* Nodo 1 */}
+          {/* Nodo 1 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
-                {/* 👇 Ruta exacta con el basePath 👇 */}
-                <img src="https://github.com/user-attachments/assets/15d3432e-96d6-410d-aeaa-bed26f796847" alt="Día 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src="https://drive.google.com/uc?export=view&id=1U--mFVE6Ecx6faCpXJPCiK526htW31fo" alt="Foto 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <p className="font-semibold text-slate-200">De nuestras primeras citas</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Ajuste del modelo)</p>
@@ -286,36 +285,75 @@ export default function Dashboard() {
             {/* Nodo 2 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
-                {/* 👇 Ruta exacta con el basePath 👇 */}
-                <img src="https://github.com/user-attachments/assets/61347393-89cd-4103-b383-ac6c3ec07080" alt="Día 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src="https://drive.google.com/uc?export=view&id=1L_Mip5MQR7-GGIzvCTZXh_Q868QPq0yz" alt="Foto 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <p className="font-semibold text-slate-200">Dateando en el carro</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Alta correlación de gustos)</p>
             </div>
 
             {/* Conector */}
-            <div className="hidden md:flex flex-1 h-0.5 bg-gradient-to-r from-slate-800 to-green-500/50 mx-2 flex-col items-center relative">
-               <div className="absolute w-full h-full flex justify-end -top-2 right-0">
-                <ChevronRight className="text-green-500 w-5 h-5" />
+            <div className="hidden md:flex flex-1 h-0.5 bg-slate-800 mx-2 flex-col items-center relative">
+              <div className="absolute w-full h-full flex justify-center -top-2">
+                <ChevronRight className="text-slate-600 w-5 h-5" />
               </div>
             </div>
 
-            {/* Nodo 3 - Futuro */}
-            <div className="flex flex-col items-center min-w-[220px] flex-shrink-0 mt-6 md:mt-0">
-              <div className="w-24 h-24 rounded-2xl border-2 border-dashed border-green-400 bg-green-400/10 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(74,222,128,0.2)]">
-                <Camera className="text-green-400 w-8 h-8" />
+            {/* Nodo 3 */}
+            <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
+                <img src="https://drive.google.com/uc?export=view&id=1Yb5KcrSmjW99n0qn0yNp1u-WFzJfai4V" alt="Foto 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
-              <p className="font-semibold text-green-400">AÑO 2026+ | Próxima Aventura</p>
-              <p className="text-xs text-green-500/70 font-mono mt-1 text-center px-4">
-                (Por programar y calcular)
-              </p>
+              <p className="font-semibold text-slate-200">Momentos inolvidables</p>
+              <p className="text-xs text-slate-500 font-mono mt-1">(Expansión de la muestra)</p>
             </div>
-            
-          </div>
-          <p className="text-center text-sm text-slate-400 mt-6 italic">
-            "¿Me ayudas a seguir recopilando datos y llenando este timeline de aventuras?"
-          </p>
-        </section>
+
+            {/* Conector */}
+            <div className="hidden md:flex flex-1 h-0.5 bg-slate-800 mx-2 flex-col items-center relative">
+              <div className="absolute w-full h-full flex justify-center -top-2">
+                <ChevronRight className="text-slate-600 w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Nodo 4 */}
+            <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
+                <img src="https://drive.google.com/uc?export=view&id=1Wiy3T_vF6-Qkb_alu8u0bYtlLGSzful0" alt="Foto 4" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <p className="font-semibold text-slate-200">Aventuras juntos</p>
+              <p className="text-xs text-slate-500 font-mono mt-1">(Cifrado de confianza)</p>
+            </div>
+
+            {/* Conector */}
+            <div className="hidden md:flex flex-1 h-0.5 bg-slate-800 mx-2 flex-col items-center relative">
+              <div className="absolute w-full h-full flex justify-center -top-2">
+                <ChevronRight className="text-slate-600 w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Nodo 5 */}
+            <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
+                <img src="https://drive.google.com/uc?export=view&id=1BoZMCVXp-GyXlACj3N_mDy3CH0awCjo6" alt="Foto 5" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <p className="font-semibold text-slate-200">Más que un equipo</p>
+              <p className="text-xs text-slate-500 font-mono mt-1">(Sincronización al 100%)</p>
+            </div>
+
+            {/* Conector */}
+            <div className="hidden md:flex flex-1 h-0.5 bg-slate-800 mx-2 flex-col items-center relative">
+              <div className="absolute w-full h-full flex justify-center -top-2">
+                <ChevronRight className="text-slate-600 w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Nodo 6 */}
+            <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
+                <img src="https://drive.google.com/uc?export=view&id=1qMkdWNiIfo2ZTyUyw8UUl-UiSieqHM5P" alt="Foto 6" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <p className="font-semibold text-slate-200">El punto sin retorno</p>
+              <p className="text-xs text-slate-500 font-mono mt-1">(Riesgo mitigado)</p>
+            </div>
 
         {/* BLOQUE DE CÓDIGO Y PREGUNTA */}
         <section className="bg-[#1e1e1e] rounded-xl border border-slate-800 overflow-hidden font-mono shadow-2xl relative">
