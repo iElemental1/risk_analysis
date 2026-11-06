@@ -272,8 +272,7 @@ export default function Dashboard() {
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 {/* Puedes reemplazar esta URL con la ruta de tu foto real ej: "/foto-1.jpg" */}
-                <img src={fotoUno.src} alt="Día 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
-              </div>
+                <img src="./foto-1.jpg" alt="Día 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />              </div>
               <p className="font-semibold text-slate-200">De nuestras primeras citas</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Ajuste del modelo)</p>
             </div>
@@ -289,7 +288,7 @@ export default function Dashboard() {
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 {/* Puedes reemplazar esta URL con la ruta de tu foto real */}
-                <img src={fotoDos.src} alt="Dia 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src="./foto-2.png" alt="Día 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <p className="font-semibold text-slate-200">Dateando en el carro</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Alta correlación de gustos)</p>
