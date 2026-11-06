@@ -266,7 +266,7 @@ export default function Dashboard() {
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0 overflow-x-auto pb-4 hide-scrollbar">
             
-          {/* Nodo 1 */}
+{/* Nodo 1 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 <img src="https://drive.google.com/uc?export=view&id=1U--mFVE6Ecx6faCpXJPCiK526htW31fo" alt="Foto 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
@@ -282,7 +282,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Nodo 2 */}
+{/* Nodo 2 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 <img src="https://drive.google.com/uc?export=view&id=1L_Mip5MQR7-GGIzvCTZXh_Q868QPq0yz" alt="Foto 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
@@ -298,7 +298,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Nodo 3 */}
+{/* Nodo 3 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 <img src="https://drive.google.com/uc?export=view&id=1Yb5KcrSmjW99n0qn0yNp1u-WFzJfai4V" alt="Foto 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
@@ -354,6 +354,12 @@ export default function Dashboard() {
               <p className="font-semibold text-slate-200">El punto sin retorno</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Riesgo mitigado)</p>
             </div>
+            
+          </div>
+          <p className="text-center text-sm text-slate-400 mt-6 italic">
+            "¿Me ayudas a seguir recopilando datos y llenando este timeline de aventuras?"
+          </p>
+        </section>
 
         {/* BLOQUE DE CÓDIGO Y PREGUNTA */}
         <section className="bg-[#1e1e1e] rounded-xl border border-slate-800 overflow-hidden font-mono shadow-2xl relative">
