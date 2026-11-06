@@ -124,53 +124,95 @@ export default function Dashboard() {
     });
   };
 
-  // --- PANTALLA 1: FORMULARIO ---
+  // --- PANTALLA 1: FORMULARIO ACTUARIAL ---
   if (screen === 1) {
     return (
       <div className="min-h-screen bg-slate-950 text-slate-200 flex items-center justify-center p-4 font-mono">
-        <div className="max-w-md w-full bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden">
-          <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center gap-3">
-            <Activity className="text-cyan-400" size={24} />
-            <h1 className="text-lg font-bold text-white tracking-wide">
-              EVALUACIÓN PRELIMINAR DE RIESGO
-            </h1>
+        <div className="max-w-xl w-full bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden">
+          <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Activity className="text-cyan-400" size={24} />
+              <h1 className="text-sm md:text-base font-bold text-white tracking-wide">
+                MODELO ACTUARIAL DE RIESGO COLECTIVO [v2.4]
+              </h1>
+            </div>
+            <span className="text-xs text-cyan-400 bg-cyan-950 px-2 py-1 rounded border border-cyan-800">Stoch_Model</span>
           </div>
           
-          <div className="p-6 space-y-8">
-            <p className="text-sm text-slate-400">
-              Por favor, ingresa los parámetros iniciales para calibrar el modelo predictivo conjunto.
+          <div className="p-6 space-y-6">
+            <p className="text-xs text-slate-400">
+              [SYSTEM_NOTICE]: Ingrese los parámetros estocásticos y variables biométricas iniciales para calibrar la valuación de pasivos contingentes y estabilidad a largo plazo.
             </p>
             
-            {/* Sliders */}
-            <div className="space-y-6">
+            {/* Sliders de Actuaría y Riesgos */}
+            <div className="space-y-5">
               {[
-                { id: 'horas', label: 'Horas de plática continuas', value: sliders.horas },
-                { id: 'compatibilidad', label: 'Nivel de compatibilidad analizado', value: sliders.compatibilidad },
-                { id: 'proyeccion', label: 'Proyección a futuro (%)', value: sliders.proyeccion }
+                { 
+                  id: 'tasaInteres', 
+                  label: 'Tasa Técnica de Interés (Garantizada)', 
+                  value: sliders.tasaInteres || 4.5, 
+                  unit: '%', 
+                  min: 1, 
+                  max: 10, 
+                  step: 0.1,
+                  desc: 'Rendimiento proyectado sobre el capital emocional invertido.'
+                },
+                { 
+                  id: 'mortalidad', 
+                  label: 'Factor de Ajuste de Mortalidad (q_x)', 
+                  value: sliders.mortalidad || 0.01, 
+                  unit: '‰', 
+                  min: 0.001, 
+                  max: 0.05, 
+                  step: 0.001,
+                  desc: 'Probabilidad de extinción de la soltería en el corto plazo.'
+                },
+                { 
+                  id: 'var99', 
+                  label: 'Valor en Riesgo - VaR (Confianza 99.9%)', 
+                  value: sliders.var99 || 99.9, 
+                  unit: '%', 
+                  min: 90, 
+                  max: 99.9, 
+                  step: 0.1,
+                  desc: 'Pérdida máxima esperada bajo escenarios de alta volatilidad afectiva.'
+                },
+                { 
+                  id: 'siniestralidad', 
+                  label: 'Índice de Siniestralidad Histórica (Coquetería)', 
+                  value: sliders.siniestralidad || 100, 
+                  unit: '%', 
+                  min: 10, 
+                  max: 200, 
+                  step: 5,
+                  desc: 'Frecuencia de eventos estocásticos de risas y miradas.'
+                }
               ].map((item) => (
-                <div key={item.id} className="space-y-2">
-                  <div className="flex justify-between text-sm">
+                <div key={item.id} className="bg-slate-950/60 p-3 rounded-lg border border-slate-800 space-y-2">
+                  <div className="flex justify-between text-xs">
                     <span className="text-cyan-300 font-semibold">{item.label}</span>
-                    <span className="text-slate-300">{item.value}</span>
+                    <span className="text-green-400 font-bold">{item.value}{item.unit}</span>
                   </div>
                   <input 
                     type="range" 
-                    min="1" 
-                    max="100" 
+                    min={item.min} 
+                    max={item.max} 
+                    step={item.step}
                     value={item.value}
                     onChange={(e) => setSliders({...sliders, [item.id]: e.target.value})}
                     className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-400"
                   />
+                  <p className="text-[10px] text-slate-500">{item.desc}</p>
                 </div>
               ))}
             </div>
 
             <button 
               onClick={() => setScreen(2)}
-              className="w-full py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-[0_0_15px_rgba(8,145,178,0.5)]"
+              className="w-full py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-[0_0_15px_rgba(8,145,178,0.5)] mt-4"
             >
               <Code size={18} />
-              calcular_riesgo_actuarial()
+              ejecutar_simulacion_montecarlo()
             </button>
           </div>
         </div>
