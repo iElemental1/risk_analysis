@@ -242,7 +242,7 @@ export default function Dashboard() {
     );
   }
 
-  // --- PANTALLA 3 y 4: DASHBOARD CLÍMAX ---
+ // --- PANTALLA 3 y 4: DASHBOARD CLÍMAX ---
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 p-4 md:p-8 font-sans relative overflow-hidden">
       {screen === 4 && <Confetti />}
@@ -269,7 +269,7 @@ export default function Dashboard() {
               <Terminal className="text-cyan-400" />
               EVALUACIÓN DE RIESGO DE NOVIAZGO
             </h1>
-            <p className="text-slate-400 mt-1">Sujetos de prueba: Fer & [Tu Nombre]</p>
+            <p className="text-slate-400 mt-1">Sujetos de prueba: Fer & Emiliano</p>
           </div>
           <div className="px-4 py-2 bg-slate-900 border border-slate-700 rounded-full flex items-center gap-2 text-sm font-mono">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -308,7 +308,7 @@ export default function Dashboard() {
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0 overflow-x-auto pb-4 hide-scrollbar">
             
-{/* Nodo 1 */}
+            {/* Nodo 1 */}
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 <img src="https://lh3.googleusercontent.com/d/1U--mFVE6Ecx6faCpXJPCiK526htW31fo" alt="Foto 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
@@ -401,6 +401,69 @@ export default function Dashboard() {
           <p className="text-center text-sm text-slate-400 mt-6 italic">
             "¿Me ayudas a seguir recopilando datos y llenando este timeline de aventuras?"
           </p>
+        </section>
+
+        {/* MATRIZ DE CALOR DE RIESGOS (Opción 2) */}
+        <section className="bg-slate-900 rounded-2xl border border-slate-800 p-6 md:p-8">
+          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <ShieldCheck className="text-cyan-400" size={20} />
+            MATRIZ DE CALOR: IMPACTO VS. PROBABILIDAD (ISO 31000)
+          </h2>
+          <p className="text-xs text-slate-400 mb-6">
+            Evaluación cualitativa de riesgos afectivos bajo los estándares de control interno corporativo.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center font-mono text-xs">
+            <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 flex flex-col justify-center">
+              <span className="text-slate-400">Bajo / Bajo</span>
+              <span className="text-slate-500 text-[10px] mt-1">Riesgo de aburrimiento</span>
+              <span className="text-green-400 font-bold mt-2">0.0% (Mitigado)</span>
+            </div>
+            <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 flex flex-col justify-center">
+              <span className="text-slate-400">Medio / Medio</span>
+              <span className="text-slate-500 text-[10px] mt-1">Indecisión de qué cenar</span>
+              <span className="text-yellow-400 font-bold mt-2">15.2% (Tolerable)</span>
+            </div>
+            <div className="bg-cyan-950/40 p-4 rounded-lg border border-cyan-500/50 flex flex-col justify-center shadow-[0_0_15px_rgba(6,182,212,0.1)]">
+              <span className="text-cyan-300 font-bold">Alto / Certero</span>
+              <span className="text-cyan-400 text-[10px] mt-1">Enamoramiento masivo</span>
+              <span className="text-cyan-400 font-bold mt-2 text-sm">100% (Acceptable / Core)</span>
+            </div>
+          </div>
+        </section>
+
+        {/* LOGS DE AUDITORÍA SIEM (Opción 3) */}
+        <section className="bg-slate-900 rounded-2xl border border-slate-800 p-6 md:p-8">
+          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <Terminal className="text-cyan-400" size={20} />
+            SIEM AUDIT LOGS - INCIDENTES DETECTADOS
+          </h2>
+          <div className="bg-black p-4 rounded-xl border border-slate-800 font-mono text-xs space-y-2 text-slate-300 overflow-x-auto">
+            <div className="flex justify-between text-slate-500 border-b border-slate-900 pb-1 min-w-[500px]">
+              <span>TIMESTAMP</span>
+              <span>EVENT_ID</span>
+              <span>SEVERITY</span>
+              <span>DESCRIPTION</span>
+            </div>
+            <div className="flex justify-between items-center text-cyan-400 min-w-[500px]">
+              <span>[2026-02-14 21:00]</span>
+              <span>EVT_089</span>
+              <span className="bg-green-950 text-green-400 px-1.5 py-0.5 rounded text-[10px]">INFO</span>
+              <span>Sonrisa detectada (Anomalía positiva extrema)</span>
+            </div>
+            <div className="flex justify-between items-center text-cyan-400 min-w-[500px]">
+              <span>[2026-03-20 18:30]</span>
+              <span>EVT_090</span>
+              <span className="bg-green-950 text-green-400 px-1.5 py-0.5 rounded text-[10px]">INFO</span>
+              <span>Sintonía de gustos musicales al 99.8%</span>
+            </div>
+            <div className="flex justify-between items-center text-pink-400 font-bold min-w-[500px]">
+              <span>[REALTIME]</span>
+              <span>EVT_099</span>
+              <span className="bg-pink-950 text-pink-400 px-1.5 py-0.5 rounded text-[10px]">CRITICAL</span>
+              <span>Propuesta de noviazgo pendiente de autorización</span>
+            </div>
+          </div>
         </section>
 
         {/* BLOQUE DE CÓDIGO Y PREGUNTA */}
