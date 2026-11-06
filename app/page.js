@@ -270,7 +270,7 @@ export default function Dashboard() {
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 {/* 👇 Ruta exacta con el basePath 👇 */}
-                <img src="/risk_analysis/foto-1.jpg" alt="Día 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src="https://github.com/user-attachments/assets/15d3432e-96d6-410d-aeaa-bed26f796847" alt="Día 1" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <p className="font-semibold text-slate-200">De nuestras primeras citas</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Ajuste del modelo)</p>
@@ -287,7 +287,7 @@ export default function Dashboard() {
             <div className="flex flex-col items-center min-w-[200px] flex-shrink-0">
               <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-slate-700 mb-4 shadow-lg">
                 {/* 👇 Ruta exacta con el basePath 👇 */}
-                <img src="/risk_analysis/foto-2.png" alt="Día 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src="https://github.com/user-attachments/assets/61347393-89cd-4103-b383-ac6c3ec07080" alt="Día 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <p className="font-semibold text-slate-200">Dateando en el carro</p>
               <p className="text-xs text-slate-500 font-mono mt-1">(Alta correlación de gustos)</p>
